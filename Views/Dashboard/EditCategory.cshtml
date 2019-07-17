@@ -1,0 +1,18 @@
+@model Category
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/site.css"/>
+<body>
+    <h1>Create Category</h1>
+    <a href="/logout">Logout</a>
+    <a href="/dashboard">Dashboard</a>
+
+     <form  asp-action="UpdateCategory" asp-controller="Dashboard" method="post">
+                <p>Edit Category</p>
+                <span asp-validation-for="CategoryName"></span><br>
+                <label asp-for="CategoryName"></label><br>
+                <input class="form-control form-control-lg" asp-for="CategoryName"><br>
+                <button class="btn btn-primary btn-lg">Update</button>
+    </form> 
+</body>
+</head>

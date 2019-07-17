@@ -1,0 +1,24 @@
+@model List<Card>
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/site.css"/>
+<body>
+        <div class = "header">
+            <p class = "title">Welcome, @ViewBag.User.Name!</p>
+        </div>
+        <div class ="navBar">
+    <a href="/create/card">Manage Flashcards</a> | 
+    <a href="/create/category">Manage Categories</a> | 
+        <a href="/logout">Logout</a>
+    </div>
+    <div class = "mainWrapper">
+        <p>Select a category to practice: </p>
+        <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/0';">All</button>
+
+        @foreach (var category in ViewBag.categories)
+        {
+            <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/@category.CategoryId';">@category.CategoryName</button>
+        }
+        </div>
+</body>
+</head>

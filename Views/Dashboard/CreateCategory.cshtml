@@ -1,0 +1,48 @@
+@model Category
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/site.css"/>
+<body>
+        <div class = "header">
+            <p class = "title">Catergory Manager</p>
+        </div>
+        <div class ="navBar">
+    <a href="/dashboard">Dashboard</a> | 
+    <a href="/create/card">Manage Flashcards</a> | 
+        <a href="/logout">Logout</a>
+    </div>
+<div class = "mainWrapper">
+     <form  asp-action="AddCategory" asp-controller="Dashboard" method="post">
+                <p>Add a New Category</p>
+                <span asp-validation-for="CategoryName"></span><br>
+                <label asp-for="CategoryName"></label><br>
+                <input class="form-control form-control-lg" asp-for="CategoryName"><br>
+                <button class="btn btn-primary btn-lg">Add</button>
+    </form>
+<br>
+    <p>All Flashcards</p>
+        <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Flashcard</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+          @foreach (var category in @ViewBag.Categories)
+    {
+    <tr>
+      <th scope="row">@category.CategoryId</th>
+      <td>@category.CategoryName</td>
+      <td><a href="/edit/category/@category.CategoryId">Edit</a> | 
+      <a href="/delete/category/@category.CategoryId">Delete</a>
+    </td>
+    </tr>
+    }
+  </tbody>  
+</table>
+
+</div> 
+</body>
+</head>

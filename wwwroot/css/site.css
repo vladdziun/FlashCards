@@ -1,0 +1,151 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+/* * { 
+    outline: 1px dotted red; 
+} */
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+.login{
+    display: inline-block;
+    margin-left: 30%;
+    max-width: 800px;
+    background-color:#8080801c;
+    border-radius: 5px;
+    padding: 8px;
+}
+.register{  
+    display: inline-block;
+    vertical-align: top;
+    max-width: 250px;
+    background-color:#8080801c;
+    border-radius: 5px;
+    padding: 8px;
+}
+.register label{
+    font-weight: lighter;
+}
+.login label{
+    font-weight: lighter;
+}
+.title{
+    margin: auto;
+}
+.loginWrapper{
+    max-width: 1500px;
+    max-height: 1000px;
+    padding: 3%;
+    color:black;
+    vertical-align: top;
+    margin: auto;
+    width: 50%;
+    padding: 10px;  
+
+}
+.mainWrapper{
+    max-width: 1500px;
+    max-height: 1000px;
+    padding: 3%;
+    color:black;
+    vertical-align: top;
+    margin: auto;
+    width: 50%;
+    padding: 10px;  
+}
+.mainContent{
+    max-width: 1500px;
+    max-height: 1000px;
+    min-height: 300px;
+    padding: 3%;
+    color:black;
+    vertical-align: top;
+    margin: auto;
+    width: 50%;
+    padding: 10px; 
+    border: 1px solid #000000; 
+}
+.mainContentWrapper{
+    max-width: 1500px;
+    max-height: 1000px;
+    padding: 3%;
+    color:black;
+    vertical-align: top;
+    text-align: center; 
+    margin: auto;
+    width: 50%;
+    padding: 10px;  
+}
+.buttonWrapper{
+    margin: auto;
+    width: 50%;
+    padding: 10px;  
+    text-align: center; 
+}
+.navBar{
+    margin: auto;
+    width: 50%;
+    padding: 10px;  
+}
+.header{
+    max-width: 1500px;
+    max-height: 1000px;
+    padding: 3%;
+    color:black;
+    vertical-align: top;
+    margin: auto;
+    width: 50%;
+    background-color:#8080801c;
+    border-radius: 5px;
+    padding: 8px; 
+
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1980px;
+}
+  .register span{  
+      color: red;
+      font-size: 12px;   
+}
+.login span{
+    color: red;
+    font-size: 12px;   
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
