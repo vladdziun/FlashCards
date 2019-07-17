@@ -4,10 +4,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <a href="/logout">Logout</a>
-    <a href="/create/category">Create category</a>
-    <a href="/create/card">Create Flashcard</a>
-    <p>This category is empty. Please, <a href ="/create/card">create new flashcard</a> 
-    or <a href ="/dashboard">choose another category</a></p>
+    <div class = "header">
+        <p class = "title">Flashcards</p>
+        </div>
+        <div class ="navBar">
+            <a href="/dashboard">Dashboard</a> | 
+            <a href="/create/card">Manage Flashcards</a> | 
+            <a href="/create/category">Manage Categories</a> | 
+        <a href="/logout">Logout</a>
+    </div>
+    <div class = "mainWrapper animated fadeIn">
+        <p>This category is empty. Please, <a href ="/create/card">create new flashcard</a> 
+        or <a href ="/dashboard">choose another category</a></p>
+    </div>
 </body>

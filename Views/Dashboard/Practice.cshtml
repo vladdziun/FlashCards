@@ -8,15 +8,14 @@
 </head>
 <body>
         <div class = "header">
-            <p class = "title">Practice @ViewBag.Category</p>
+            <p class = "title">Practice @ViewBag.Category <a style ="margin-left:70%;" href="/logout">Logout</a></p>
         </div>
         <div class ="navBar">
             <a href="/dashboard">Dashboard</a> | 
             <a href="/create/card">Manage Flashcards</a> | 
-            <a href="/create/category">Manage Categories</a> | 
-            <a href="/logout">Logout</a>
+            <a href="/create/category">Manage Categories</a>
         </div>
-    <div class = "mainContent animated rollIn">
+    <div class = "mainContent animated fadeInLeft">
         <div class = "mainContentWrapper">
             <p class = "cardFront animated flipInY">@ViewBag.Card.FrontText</p>
             <p class = "cardBack animated flipInY" style="display:none;">@ViewBag.Card.BackText</p>
