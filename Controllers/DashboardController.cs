@@ -67,7 +67,12 @@ namespace LoginReg.Controllers
                 return RedirectToAction("Dashboard");
             }
             else
-                return View("CreateWedding");
+            {
+                List<Category> categories= dbContext.Categories
+                .Where(category => category.CreatorId == userId).ToList();
+                ViewBag.Categories = categories;
+                return View("CreateCategory");
+            }
         }
         [Route("create/card")]
         [HttpGet]
@@ -103,7 +108,15 @@ namespace LoginReg.Controllers
                 return RedirectToAction("Dashboard");
             }
             else
+            {
+                List<Category> categories= dbContext.Categories
+                .Where(category => category.CreatorId == userId).ToList();
+                ViewBag.Categories = categories;
+                List<Card> cards= dbContext.Cards
+                .Where(card => card.UserId == userId).ToList();
+                ViewBag.Cards = cards;
                 return View("CreateCard");
+            }
         }
         [Route("practice/{id}")]
         [HttpGet]
@@ -112,6 +125,9 @@ namespace LoginReg.Controllers
             int? userId = HttpContext.Session.GetInt32("UserId");
             if (userId == null)
                 return RedirectToAction("Index", "Home");
+
+            Category oneCategory = dbContext.Categories
+            .FirstOrDefault(category => category.CategoryId == id);
 
             if(id == 0)
             {
@@ -124,6 +140,7 @@ namespace LoginReg.Controllers
                 int randomCard = random.Next(0, cards.Count());
                 ViewBag.Card = cards[randomCard];
                 ViewBag.Id = id;
+                ViewBag.Category = "All";
             }
             else
             {
@@ -135,6 +152,7 @@ namespace LoginReg.Controllers
                 int randomCard = random.Next(0, cards.Count());
                 ViewBag.Card = cards[randomCard];
                 ViewBag.Id = id;
+                ViewBag.Category = oneCategory.CategoryName;
             }
 
             return View("Practice");

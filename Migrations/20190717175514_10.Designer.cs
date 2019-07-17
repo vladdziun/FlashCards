@@ -3,14 +3,16 @@ using System;
 using LoginReg.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LoginReg.Migrations
 {
     [DbContext(typeof(LoginRegContext))]
-    partial class LoginRegContextModelSnapshot : ModelSnapshot
+    [Migration("20190717175514_10")]
+    partial class _10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace LoginReg.Migrations
 
                     b.Property<string>("FrontText")
                         .IsRequired()
-                        .HasMaxLength(200);
+                        .HasMaxLength(1000);
 
                     b.Property<int>("UserId");
 

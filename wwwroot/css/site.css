@@ -35,8 +35,8 @@ body {
 }
 .login{
     display: inline-block;
-    margin-left: 30%;
-    max-width: 800px;
+    margin-left: 20%;
+    max-width: 1500px;
     background-color:#8080801c;
     border-radius: 5px;
     padding: 8px;
@@ -59,7 +59,7 @@ body {
     margin: auto;
 }
 .loginWrapper{
-    max-width: 1500px;
+    max-width: 1900px;
     max-height: 1000px;
     padding: 3%;
     color:black;
@@ -138,6 +138,10 @@ body {
       font-size: 12px;   
 }
 .login span{
+    color: red;
+    font-size: 12px;   
+}
+.mainWrapper span{
     color: red;
     font-size: 12px;   
 }

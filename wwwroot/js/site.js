@@ -9,6 +9,7 @@ $(document).ready(function(){
             if ($('.cardFront').is(":visible") == true) {
                 $('.cardFront').hide();
                 $('.cardBack').show();
+                $('mainContent').classList.add('animated', 'bounceOutLeft');
                 console.log("CLIKED!");
             } else {
                 $('.cardFront').show();

@@ -9,8 +9,9 @@ namespace LoginReg.Models
     {
     [Key]
     public int CategoryId {get;set;}
-    [Required]
+    [Required(ErrorMessage = "Category Name is required")]
     [StringLength(50, MinimumLength = 3, ErrorMessage = "Back should be atleast 3 characters!")]
+    [Display(Name = "Category Name")]
     public string CategoryName {get;set;}
     public int CreatorId {get;set;}
 

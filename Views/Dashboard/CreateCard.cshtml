@@ -14,10 +14,10 @@
     <div class = "mainWrapper">
      <form  asp-action="AddCard" asp-controller="Dashboard" method="post">
                 <p>Add a New Flashcard</p>
-                <span asp-validation-for="FrontText"></span>
+                <span asp-validation-for="FrontText"></span><br>
                 <label asp-for="FrontText"></label>
                 <input class="form-control form-control-lg" asp-for="FrontText">
-                <span asp-validation-for="BackText"></span>
+                <span asp-validation-for="BackText"></span><br>
                 <label asp-for="BackText"></label>
                 <textarea rows="10" style = "resize: none; font-size:14px;" class="form-control" aria-label="With textarea" asp-for="BackText"></textarea>
                 <span asp-validation-for="CategoryId"></span>
