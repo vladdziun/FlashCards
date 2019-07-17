@@ -30,5 +30,6 @@ namespace LoginReg.Models
 
     //nav properties go here
     public List<Card> UserCards {get;set;}
+    public List<Category> UserCategories {get;set;}
     }
 }

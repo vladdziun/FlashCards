@@ -3,16 +3,24 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
 <body>
-    <h1>Create Category</h1>
-    <a href="/logout">Logout</a>
-    <a href="/dashboard">Dashboard</a>
-
+        <div class = "header">
+            <p class = "title">Edit Category</p>
+        </div>
+        <div class ="navBar">
+            <a href="/dashboard">Dashboard</a> | 
+            <a href="/create/card">Manage Flashcards</a> | 
+            <a href="/create/category">Manage Categories</a> | 
+            <a href="/logout">Logout</a>
+        </div>
+<div class = "mainWrapper">
      <form  asp-action="UpdateCategory" asp-controller="Dashboard" method="post">
                 <p>Edit Category</p>
                 <span asp-validation-for="CategoryName"></span><br>
                 <label asp-for="CategoryName"></label><br>
                 <input class="form-control form-control-lg" asp-for="CategoryName"><br>
                 <button class="btn btn-primary btn-lg">Update</button>
+                <a href="/delete/category/@Model.CategoryId">Delete</a>
     </form> 
+</div>
 </body>
 </head>

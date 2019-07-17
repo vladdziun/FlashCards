@@ -3,19 +3,25 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
 <body>
-    <h1>EditFlashcard</h1>
-    <a href="/logout">Logout</a>
-    <a href="/dashboard">Dashboard</a>
-
+        <div class = "header">
+            <p class = "title">Edit Flashcard</p>
+        </div>
+        <div class ="navBar">
+            <a href="/dashboard">Dashboard</a> | 
+            <a href="/create/card">Manage Flashcards</a> | 
+            <a href="/create/category">Manage Categories</a> | 
+            <a href="/logout">Logout</a>
+        </div>
+<div class = "mainWrapper">
      <form  asp-action="UpdateCard" asp-controller="Dashboard" method="post">
                 <p>Edit Flashcard</p>
-                <span asp-validation-for="FrontText"></span><br>
-                <label asp-for="FrontText"></label><br>
-                <input class="form-control form-control-lg" asp-for="FrontText"><br>
-                <span asp-validation-for="BackText"></span><br>
-                <label asp-for="BackText"></label><br>
-                <input class="form-control form-control-lg" asp-for="BackText"><br>
-                <span asp-validation-for="CategoryId"></span><br>
+                <span asp-validation-for="FrontText"></span>
+                <label asp-for="FrontText"></label>
+                <input class="form-control form-control-lg" asp-for="FrontText">
+                <span asp-validation-for="BackText"></span>
+                <label asp-for="BackText"></label>
+                <textarea rows="10" style = "resize: none; font-size:14px;" class="form-control" aria-label="With textarea" asp-for="BackText"></textarea>
+                <span asp-validation-for="CategoryId"></span>
                 <label asp-for="CategoryId"></label><br>
                 <select asp-for="CategoryId">
                     @foreach (var category in @ViewBag.Categories)
@@ -23,7 +29,10 @@
                         <option value="@category.CategoryId">@category.CategoryName</option>
                     }
                 </select><br>
-                <button class="btn btn-primary btn-lg">Add</button>
+                <button class="btn btn-primary btn-lg">Update</button>
+                <a href="/delete/card/@Model.CardId">Delete</a>
+
     </form>
+    </div>
 </body>
 </head>
