@@ -2,6 +2,8 @@
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
 <body>
         <div class = "header">
             <p class = "title">Welcome, @ViewBag.User.Name!</p>
@@ -11,7 +13,7 @@
     <a href="/create/category">Manage Categories</a> | 
         <a href="/logout">Logout</a>
     </div>
-    <div class = "mainWrapper">
+    <div class = "mainWrapper animated fadeIn">
         <p>Select a category to practice: </p>
         <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/0';">All</button>
 
@@ -21,4 +23,3 @@
         }
         </div>
 </body>
-</head>

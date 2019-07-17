@@ -3,6 +3,7 @@
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
@@ -22,8 +23,10 @@
         </div>
     </div>
     <div class = "buttonWrapper">
-            <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/@ViewBag.Id';">Next Card</button>
-            <button class ="flipCard btn btn-info btn-lg">Flip Card</button>
+            <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/@ViewBag.Id';"> 
+            <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Next Card</button>
+            <button class ="flipCard btn btn-info btn-lg">
+                <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span> Flip Card</button>
     </div>
 
 </body>

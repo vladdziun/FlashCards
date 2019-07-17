@@ -80,7 +80,7 @@ body {
     padding: 10px;  
 }
 .mainContent{
-    max-width: 1500px;
+    max-width: 1200px;
     max-height: 1000px;
     min-height: 300px;
     padding: 3%;
@@ -90,6 +90,9 @@ body {
     width: 50%;
     padding: 10px; 
     border: 1px solid #000000; 
+}
+.cardBack{
+    text-align: left;
 }
 .mainContentWrapper{
     max-width: 1500px;
@@ -145,6 +148,9 @@ body {
     color: red;
     font-size: 12px;   
 }
+.cardFront {
+    text-overflow: ellipsis;    
+  }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
