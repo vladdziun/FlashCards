@@ -22,10 +22,10 @@
                 <input class="form-control form-control-lg" asp-for="FrontText">
                 <span asp-validation-for="BackText"></span><br>
                 <label asp-for="BackText"></label>
-                <textarea rows="10" style = "resize: none; font-size:14px;" class="form-control" aria-label="With textarea" asp-for="BackText"></textarea>
+                <textarea rows="10" style = "resize: none; font-size:14px;" class="form-control" aria-label="With textarea" asp-for="BackText"></textarea><br>
                 <span asp-validation-for="CategoryId"></span>
                 <label asp-for="CategoryId"></label><br>
-                <select asp-for="CategoryId">
+                <select class="form-control" style ="font-size:12px;" asp-for="CategoryId">
                     @foreach (var category in @ViewBag.Categories)
                     {
                         <option value="@category.CategoryId">@category.CategoryName</option>
@@ -38,8 +38,8 @@
         <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Flashcard</th>
+      <th scope="col">Category</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -47,8 +47,8 @@
           @foreach (var card in @ViewBag.Cards)
     {
     <tr>
-      <th scope="row">@card.CardId</th>
       <td>@card.FrontText</td>
+      <td>@card.Category.CategoryName</td>
       <td><a href="/edit/card/@card.CardId">Edit</a> | 
       <a href="/delete/card/@card.CardId">Delete</a>
     </td>

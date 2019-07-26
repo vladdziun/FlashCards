@@ -64,7 +64,7 @@ namespace LoginReg.Controllers
                 newCategory.CreatorId = (int)userId;
                 dbContext.Add(newCategory);
                 dbContext.SaveChanges();
-                return RedirectToAction("Dashboard");
+                return RedirectToAction("CreateCategory");
             }
             else
             {
@@ -83,11 +83,14 @@ namespace LoginReg.Controllers
                 return RedirectToAction("Index", "Home");
 
             List<Category> categories= dbContext.Categories
-            .Where(category => category.CreatorId == userId).ToList();
+            .Where(category => category.CreatorId == userId)
+            .ToList();
             ViewBag.Categories = categories;
 
             List<Card> cards= dbContext.Cards
-                            .Where(card => card.UserId == userId).ToList();
+                            .Where(card => card.UserId == userId)
+                            .OrderBy(card => card.Category)
+                            .ToList();
             ViewBag.Cards = cards;
 
             return View("CreateCard");
@@ -105,7 +108,7 @@ namespace LoginReg.Controllers
                 newCard.UserId = (int)userId;
                 dbContext.Add(newCard);
                 dbContext.SaveChanges();
-                return RedirectToAction("Dashboard");
+                return RedirectToAction("CreateCard");
             }
             else
             {

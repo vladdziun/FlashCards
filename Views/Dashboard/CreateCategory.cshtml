@@ -27,8 +27,7 @@
         <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Flashcard</th>
+      <th scope="col">Category</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -36,7 +35,6 @@
           @foreach (var category in @ViewBag.Categories)
     {
     <tr>
-      <th scope="row">@category.CategoryId</th>
       <td>@category.CategoryName</td>
       <td><a href="/edit/category/@category.CategoryId">Edit</a> | 
       <a href="/delete/category/@category.CategoryId">Delete</a>

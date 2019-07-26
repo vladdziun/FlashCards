@@ -6,7 +6,7 @@ for details on configuring this project to bundle and minify static web assets. 
 } */
 
 body {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 20px;
     font-size: 20px;
 }
@@ -34,20 +34,28 @@ body {
     margin: 15px;
 }
 .login{
+    font-size: 30px;
     display: inline-block;
-    margin-left: 20%;
+    margin-left: 40%;
     max-width: 1500px;
     background-color:#8080801c;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
+}
+.login input{
+    font-size: 20px;
+}
+.register input{
+    font-size: 20px;
 }
 .register{  
+    font-size: 30px;
     display: inline-block;
     vertical-align: top;
-    max-width: 250px;
+    max-width: 450px;
     background-color:#8080801c;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
 }
 .register label{
     font-weight: lighter;
@@ -59,15 +67,11 @@ body {
     margin: auto;
 }
 .loginWrapper{
-    max-width: 1900px;
-    max-height: 1000px;
     padding: 3%;
     color:black;
     vertical-align: top;
     margin: auto;
-    width: 50%;
-    padding: 10px;  
-
+    padding: 40px;  
 }
 .mainWrapper{
     max-width: 1500px;
@@ -117,13 +121,7 @@ body {
     padding: 10px;  
 }
 .header{
-    max-width: 1500px;
-    max-height: 1000px;
-    padding: 3%;
-    color:black;
-    vertical-align: top;
-    margin: auto;
-    width: 50%;
+    font-size: 25px;
     background-color:#8080801c;
     border-radius: 5px;
     padding: 8px; 

@@ -25,15 +25,16 @@
                 <textarea rows="10" style = "resize: none; font-size:14px;" class="form-control" aria-label="With textarea" asp-for="BackText"></textarea>
                 <span asp-validation-for="CategoryId"></span>
                 <label asp-for="CategoryId"></label><br>
-                <select asp-for="CategoryId">
+                <select class="form-control" style ="font-size:12px;" asp-for="CategoryId">
                     @foreach (var category in @ViewBag.Categories)
                     {
                         <option value="@category.CategoryId">@category.CategoryName</option>
                     }
                 </select><br>
                 <button class="btn btn-primary btn-lg">Update</button>
-                <a href="/delete/card/@Model.CardId">Delete</a>
-
     </form>
+    <!-- <button class="btn btn-danger btn-lg" onclick="window.location.href = '/delete/card/@Model.CardId';">Delete</button> -->
+
+
     </div>
 </body>
