@@ -17,6 +17,8 @@ namespace LoginReg.Models
     [StringLength(1000, MinimumLength = 3, ErrorMessage = "Front should be atleast 3 characters!")]
     [Display(Name = "Back Card Text")]
     public string BackText {get;set;}
+    [Display(Name = "Learned")]
+    public bool isLearned {get;set;}
 
     public int UserId {get;set;}
     [Required(ErrorMessage = "Category is required")]

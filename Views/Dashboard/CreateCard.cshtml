@@ -39,6 +39,7 @@
     <tr>
       <th scope="col">Flashcard</th>
       <th scope="col">Category</th>
+      <th scope="col">Status</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -48,6 +49,15 @@
     <tr>
       <td>@card.FrontText</td>
       <td>@card.Category.CategoryName</td>
+      @if(@card.isLearned)
+      {
+        <td><a href="/mark/card/@card.CardId">Unlearn</a></td>
+      }
+      else
+      {
+        <td><a href="/mark/card/@card.CardId">Learn</a></td>
+      }
+
       <td><a href="/edit/card/@card.CardId">Edit</a> | 
       <a href="/delete/card/@card.CardId">Delete</a>
     </td>

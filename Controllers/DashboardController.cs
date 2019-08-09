@@ -135,7 +135,7 @@ namespace LoginReg.Controllers
             if(id == 0)
             {
                 List<Card> cards= dbContext.Cards
-                .Where(card => card.UserId == userId).ToList();
+                .Where(card => card.UserId == userId && !card.isLearned).ToList();
                 if(cards.Count() < 1)
                     return View("EmptyPractice");  
 
@@ -148,7 +148,7 @@ namespace LoginReg.Controllers
             else
             {
                 List<Card> cards= dbContext.Cards
-                .Where(card => card.UserId == userId && card.CategoryId == id).ToList();
+                .Where(card => card.UserId == userId && card.CategoryId == id && !card.isLearned).ToList();
                 if(cards.Count() < 1)
                     return View("EmptyPractice"); 
                 Random random = new Random();
@@ -238,6 +238,33 @@ namespace LoginReg.Controllers
             oneCategory.CategoryName = updatedCategory.CategoryName;
             dbContext.SaveChanges();
             return RedirectToAction("CreateCategory");
+        }
+        [Route("mark/card/{id}")]
+        [HttpGet]
+        public IActionResult MarkCard(int id)
+        {
+            int? userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Index", "Home");
+            
+            Card oneCard = dbContext.Cards.FirstOrDefault(c => c.CardId ==id);
+            oneCard.isLearned = !oneCard.isLearned;
+            dbContext.SaveChanges();
+            return RedirectToAction("CreateCard");
+        }
+        [Route("mark/card/practice/{id}")]
+        [HttpGet]
+        public IActionResult MarkCardPractice(int id)
+        {
+            int? userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+                return RedirectToAction("Index", "Home");
+            
+            Card oneCard = dbContext.Cards.FirstOrDefault(c => c.CardId ==id);
+            oneCard.isLearned = !oneCard.isLearned;
+            id = oneCard.CategoryId;
+            dbContext.SaveChanges();
+            return RedirectToAction("Practice", new { id = 0});
         }
     }
 }
