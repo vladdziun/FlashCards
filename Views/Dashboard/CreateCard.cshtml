@@ -6,13 +6,12 @@
 </head>
 <body>
         <div class = "header">
-            <p class = "title">Flashcard Manager</p>
+            <p class = "title">Flashcard Manager<a style ="float:right; font-size:20px;" href="/logout">Logout</a></p>
         </div>
         <div class ="navBar">
           <a href="/dashboard">Dashboard</a> | 
-            <a href="/create/card">Manage Flashcards</a> | 
-            <a href="/create/category">Manage Categories</a> | 
-            <a href="/logout">Logout</a>
+            <a href="/create/card">Flashcards</a> | 
+            <a href="/create/category">Categories</a>
     </div>
     <div class = "mainWrapper animated fadeIn">
      <form  asp-action="AddCard" asp-controller="Dashboard" method="post">
@@ -35,7 +34,7 @@
     </form>
     <br>
     <p>All Flashcards</p>
-        <table class="table table-hover">
+  <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Flashcard</th>
