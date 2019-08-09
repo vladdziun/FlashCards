@@ -214,6 +214,18 @@ body {
         width: 100%;
         padding: 10px;  
     }
+    .mainContent{
+        max-width: 1200px;
+        max-height: 1000px;
+        min-height: 300px;
+        padding: 3%;
+        color:black;
+        vertical-align: top;
+        margin: auto;
+        width: 100%;
+        padding: 10px; 
+        border: 1px solid #000000; 
+    }
 }
 
 
