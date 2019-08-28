@@ -1,5 +1,5 @@
 # FlashCards
-This is website where users can create custom flash cards to quiz themselves on any topic. 
+Users can create custom flash cards to quiz themselves on any topic. 
 
 TODO:
 Mobile friendly; 
