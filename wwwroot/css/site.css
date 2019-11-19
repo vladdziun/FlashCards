@@ -36,6 +36,7 @@ body {
     background-color:#8080801c;
     border-radius: 5px;
     padding: 15px;
+    margin-bottom: 45px;;
 }
 .login input{
     font-size: 20px;
@@ -162,6 +163,9 @@ body {
 .cardFront {
     text-overflow: ellipsis;    
   }
+  .table {
+    margin-bottom: 45px;;
+}
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 500px) {
@@ -185,6 +189,7 @@ body {
         background-color:#8080801c;
         border-radius: 5px;
         padding: 15px;
+        margin-bottom: 45px;;
     }
     .login input{
         font-size: 10px;
@@ -240,6 +245,18 @@ body {
         width: 100%;
         padding: 10px; 
         border: 1px solid #000000; 
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width:100%;
+        background-color:#3c3c3c;
+        /* border-radius: 5px; */
+        padding: 23px; 
+        margin-top:25px;
+    }
+    .table {
+        margin-bottom: 55px;;
     }
 }
 
