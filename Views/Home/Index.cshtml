@@ -2,33 +2,35 @@
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
+</head>
 <body>
         <div class = "header">
-        <p class = "title">Flash Cards</p>
+                <p class = "title">Flash Cards</p>
         </div>
         <div class = "loginWrapper">
                 <form class = "register" asp-action="Register" asp-controller="Home" method="post">
                 <p>Create a New Account</p>
-                <span asp-validation-for="Name"></span>
                 <label asp-for="Name"></label>
+                <span asp-validation-for="Name"></span>
                 <input class="form-control form-control-lg" asp-for="Name">
 
-                <span asp-validation-for="Email"></span>
                 <label asp-for="Email"></label>
+                <span asp-validation-for="Email"></span>
                 <input type="email" class="form-control form-control-lg" asp-for="Email">
 
-                <span asp-validation-for="Password"></span>
                 <label asp-for="Password"></label>
+                <span asp-validation-for="Password"></span>
                 <input type="password" class="form-control form-control-lg" asp-for="Password">
 
-                <span asp-validation-for="Confirm"></span>
                 <label asp-for="Confirm"></label>
+                <span asp-validation-for="Confirm"></span>
                 <input type="password" class="form-control form-control-lg" asp-for="Confirm">
                 
                 <button class="btn btn-primary btn-lg">Register</button>
                 </form>
                 <partial name="LoginUserPartial" />
         </div>
-
+    <div class = "footer">
+        <p>Vlad Dziun ©2020</p>
+    </div>
 </body>
-</head>

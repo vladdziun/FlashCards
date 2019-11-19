@@ -8,7 +8,7 @@
 </head>
 <body>
         <div class = "header">
-            <p class = "title">Practice @ViewBag.Category <a style ="float:right; font-size:20px;" href="/logout">Logout</a></p>
+            <p class = "title">Practice @ViewBag.Category <a class="logout" href="/logout">Logout</a></p>
         </div>
         <div class ="navBar">
             <a href="/dashboard">Dashboard</a> | 
@@ -29,5 +29,7 @@
             <button class="btn btn-success btn-lg" onclick="window.location.href = '/mark/card/practice/@ViewBag.Card.CardId';"> 
             <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Learn</button>
     </div>
-
+    <div class = "footer">
+        <p>Vlad Dziun ©2020</p>
+    </div>
 </body>

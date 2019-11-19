@@ -6,8 +6,8 @@
 </head>
 <body>
     <div class = "header">
-        <p class = "title">Welcome, @ViewBag.User.Name!<a style ="float:right; font-size:20px;" href="/logout">Logout</a></p>
-        </div>
+        <p class = "title">Welcome, @ViewBag.User.Name!<a class="logout" href="/logout">Logout</a></p>
+    </div>
         <div class ="navBar">
           <a href="/dashboard">Dashboard</a> | 
             <a href="/create/card">Flashcards</a> | 
@@ -22,4 +22,7 @@
             <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/@category.CategoryId';">@category.CategoryName</button>
         }
         </div>
+    <div class = "footer">
+        <p>Vlad Dziun ©2020</p>
+    </div>
 </body>

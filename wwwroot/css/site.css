@@ -6,17 +6,12 @@ for details on configuring this project to bundle and minify static web assets. 
 } */
 
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
     font-size: 20px;
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 
 /* Carousel */
 .carousel-caption p {
@@ -40,7 +35,7 @@ body {
     max-width: 1500px;
     background-color:#8080801c;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
 }
 .login input{
     font-size: 20px;
@@ -55,7 +50,7 @@ body {
     max-width: 450px;
     background-color:#8080801c;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
 }
 .register label{
     font-weight: lighter;
@@ -65,6 +60,7 @@ body {
 }
 .title{
     margin: auto;
+    color:white;
 }
 .loginWrapper{
     color:black;
@@ -80,7 +76,8 @@ body {
     vertical-align: top;
     margin: auto;
     width: 50%;
-    padding: 10px;  
+    padding: 10px;
+    margin-bottom: 20px;  
 }
 .mainContent{
     max-width: 1200px;
@@ -121,17 +118,34 @@ body {
 }
 .header{
     font-size: 25px;
-    background-color:#8080801c;
-    border-radius: 5px;
+    background-color:#3c3c3c;
+    /* border-radius: 5px; */
     padding: 8px; 
 
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background-color:#3c3c3c;
+    /* border-radius: 5px; */
+    padding: 23px; 
+    margin-top:15px;
+}
+.footer p{
+    font-size: 10px;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
 }
 .container {
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1980px;
+    max-width: 9080px;
+    margin: 0px;
 }
 .register span{  
       color: red;
@@ -170,7 +184,7 @@ body {
         margin-left: 0px;
         background-color:#8080801c;
         border-radius: 5px;
-        padding: 10px;
+        padding: 15px;
     }
     .login input{
         font-size: 10px;
@@ -185,7 +199,7 @@ body {
         width: 90%;
         background-color:#8080801c;
         border-radius: 5px;
-        padding: 10px;
+        padding: 15px;
     }
     .navBar{
         margin: auto;
@@ -213,6 +227,7 @@ body {
         margin: auto;
         width: 100%;
         padding: 10px;  
+        margin-bottom: 20px;
     }
     .mainContent{
         max-width: 1200px;
@@ -226,6 +241,17 @@ body {
         padding: 10px; 
         border: 1px solid #000000; 
     }
+}
+
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.logout{
+    margin-right: 10px;
+    margin-right: 5px;
+    float:right; 
+    font-size:20px;
 }
 
 
