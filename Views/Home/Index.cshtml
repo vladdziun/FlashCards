@@ -1,15 +1,20 @@
 ﻿@model User
+<meta name="google-signin-client_id" content="559187388921-a1535mp0dh3tp0atovgqopg0aqlejsun.apps.googleusercontent.com
+">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css"/>
 </head>
+
 <body>
         <div class = "header">
                 <p class = "title">Flash Cards</p>
         </div>
         <div class = "loginWrapper">
                 <form class = "register" asp-action="Register" asp-controller="Home" method="post">
-                <p>Create a New Account</p>
+                <p>Create New Account</p>
                 <label asp-for="Name"></label>
                 <span asp-validation-for="Name"></span>
                 <input class="form-control form-control-lg" asp-for="Name">
@@ -25,7 +30,7 @@
                 <label asp-for="Confirm"></label>
                 <span asp-validation-for="Confirm"></span>
                 <input type="password" class="form-control form-control-lg" asp-for="Confirm">
-                
+                <br>
                 <button class="btn btn-primary btn-lg">Register</button>
                 </form>
                 <partial name="LoginUserPartial" />
@@ -34,4 +39,6 @@
         <p>Vlad Dziun ©2020</p>
     </div>
 </body>
+
+
 

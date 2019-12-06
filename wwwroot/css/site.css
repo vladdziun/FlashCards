@@ -29,7 +29,7 @@ body {
     margin: 15px;
 }
 .login{
-    font-size: 30px;
+    font-size: 20px;
     display: inline-block;
     margin-left: 20%;
     max-width: 1500px;
@@ -45,7 +45,7 @@ body {
     font-size: 20px;
 }
 .register{  
-    font-size: 30px;
+    font-size: 20px;
     display: inline-block;
     vertical-align: top;
     max-width: 450px;
@@ -174,11 +174,13 @@ body {
         display: none;
     }
     .loginWrapper{
-        color:black;
-        vertical-align: top;
-        margin: auto;
-        padding: 2px; 
-        margin-top:5%; 
+        color: black;
+        padding: 0%;
+        position: absolute;
+        left: 54%;
+        top: 53%;
+        width: 73%;
+        transform: translate(-50%, -50%);
     }
     .login{
         font-size: 15px;
@@ -269,6 +271,21 @@ body {
     margin-right: 5px;
     float:right; 
     font-size:20px;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 4px;
+    line-height: 1.428571;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+@media screen and (max-width: 500px) {
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 2px;
+        line-height: 1.428571;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    
 }
 
 
