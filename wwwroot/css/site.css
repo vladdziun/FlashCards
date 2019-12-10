@@ -5,6 +5,12 @@ for details on configuring this project to bundle and minify static web assets. 
     outline: 1px dotted red; 
 } */
 
+*{
+
+    border:1px dotted #f00;
+
+    
+}
 body {
     font-size: 20px;
 }
@@ -257,7 +263,6 @@ body {
         /* border-radius: 5px; */
         padding: 23px; 
         margin-top:25px;
-        display: none;
     }
     .table {
         margin-bottom: 55px;;
@@ -273,6 +278,9 @@ body {
     margin-right: 5px;
     float:right; 
     font-size:20px;
+}
+.table{
+    margin-bottom: 20%;;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     padding: 4px;
