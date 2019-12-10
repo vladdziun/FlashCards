@@ -180,7 +180,7 @@ body {
         left: 54%;
         top: 53%;
         width: 73%;
-        margin-top:20%;
+        margin-top:18%;
         transform: translate(-50%, -50%);
     }
     .login{
@@ -257,6 +257,7 @@ body {
         /* border-radius: 5px; */
         padding: 23px; 
         margin-top:25px;
+        display: none;
     }
     .table {
         margin-bottom: 55px;;
