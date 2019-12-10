@@ -28,6 +28,13 @@ body {
 #qrCode {
     margin: 15px;
 }
+.btn-group-lg>.btn, .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    margin: 5px;
+}
 .login{
     font-size: 20px;
     display: inline-block;
