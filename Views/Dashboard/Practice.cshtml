@@ -8,7 +8,7 @@
 </head>
 <body>
         <div class = "header">
-            <p class = "title">Practice @ViewBag.Category <a class="logout" href="/logout">Logout</a></p>
+            <p class = "title">Practising @ViewBag.Category <a class="logout" href="/logout">Logout</a></p>
         </div>
         <div class ="navBar">
             <a href="/dashboard">Dashboard</a> | 
@@ -25,10 +25,10 @@
             <input type="hidden" value="/practice/@ViewBag.Id" id="pageId" />
             <button class="btn btn-primary btn-lg" onclick="window.location.href = '/practice/@ViewBag.Id';"> 
             <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Next Card</button>
-            <button class ="flipCard btn btn-info btn-lg">
+            <button class ="flipCard btn btn-primary btn-lg">
             <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span> Flip Card</button>
             <input type="hidden" value="/mark/card/practice/@ViewBag.Card.CardId" id="learnCard" />
-            <button class="btn btn-success btn-lg" onclick="window.location.href = '/mark/card/practice/@ViewBag.Card.CardId';"> 
+            <button class="btn btn btn-primary btn-lg" onclick="window.location.href = '/mark/card/practice/@ViewBag.Card.CardId';"> 
             <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Learn</button>
     </div>
     <div class = "footer">

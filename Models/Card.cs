@@ -11,11 +11,11 @@ namespace LoginReg.Models
     public int CardId {get;set;}
     [Required(ErrorMessage = "Front Card Text is required")]
     [StringLength(200, MinimumLength = 3, ErrorMessage = "Back should be atleast 3 characters!")]
-    [Display(Name = "Front Card Text")]
+    [Display(Name = "Front Card")]
     public string FrontText {get;set;}
     [Required(ErrorMessage = "Back Card Text is required")]
     [StringLength(1000, MinimumLength = 3, ErrorMessage = "Front should be atleast 3 characters!")]
-    [Display(Name = "Back Card Text")]
+    [Display(Name = "Back Card")]
     public string BackText {get;set;}
     [Display(Name = "Learned")]
     public bool isLearned {get;set;}

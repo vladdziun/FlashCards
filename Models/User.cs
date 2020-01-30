@@ -26,7 +26,7 @@ namespace LoginReg.Models
     [NotMapped]
     [Compare("Password", ErrorMessage = "The password and confirmation password do not match")]
     [DataType(DataType.Password)]
-    [Display(Name = "Password Confirm")]
+    [Display(Name = "Password Confirmation")]
     public string Confirm {get;set;}
 
     //nav properties go here

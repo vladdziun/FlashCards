@@ -6,8 +6,12 @@ for details on configuring this project to bundle and minify static web assets. 
 } */
 
 body {
+
     font-size: 20px;
+    background-color: rgb(59, 59, 59);
+    
 }
+
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -126,7 +130,7 @@ body {
 }
 .header{
     font-size: 25px;
-    background-color:#3c3c3c;
+    background-color:#1f1e1e;
     /* border-radius: 5px; */
     padding: 8px; 
 
@@ -135,7 +139,7 @@ body {
     position: fixed;
     bottom: 0;
     width:100%;
-    background-color:#3c3c3c;
+    background-color:#1f1e1e;
     /* border-radius: 5px; */
     padding: 23px; 
     margin-top:15px;
@@ -154,6 +158,7 @@ body {
     padding-left: 15px;
     max-width: 9080px;
     margin: 0px;
+    
 }
 .register span{  
       color: red;
@@ -300,4 +305,57 @@ body {
     
 }
 
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(212, 211, 211);
+    background-color: rgb(94, 94, 94);
+    background-clip: padding-box;
+    border: 1px solid #3d3d3d;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+    color: white;
+    border-color: #2689ec;
+    background-color: rgb(94, 94, 94);
+}
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: rgb(94, 94, 94);
+  }
+.mainWrapper{
+    color:white;
+}
+.table{
+    color:white;
+}
+.login{
+    color:white;
+}
+.register{
+    color:white;
+}
+.pageTitle{
+    font-size: 24px;
+    font-weight: bold;
+}
+.table{
+    font-size: 16px;
+}
+.navBar{
+    color:rgb(94, 94, 94);
+}
+.mainContent{
+    background-color: rgb(94, 94, 94);
+    border-color: #3d3d3d;
+    border-radius: 3px;
+}
+.mainContentWrapper{
+    color:white;
+}
