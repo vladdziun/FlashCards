@@ -26,6 +26,7 @@ namespace LoginReg
             services.AddDbContext<LoginRegContext>(options =>  options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddSession();            
             services.AddMvc();
+            
 
             // services.AddAuthentication().AddGoogle(googleOptions =>  
             // {  
@@ -38,6 +39,12 @@ namespace LoginReg
                 facebookOptions.AppId = Configuration["536368073585423"];
                 facebookOptions.AppSecret = Configuration["5a3e49496083420e9f84a1920acc3ad3"];
             });
+
+        services.AddHttpsRedirection(options =>
+        {
+            options.RedirectStatusCode = StatusCodes.Status308PermanentRedirect;
+            options.HttpsPort = 443;
+        });
         }
 
 
@@ -49,9 +56,10 @@ namespace LoginReg
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
             
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();  
             app.UseMvc();

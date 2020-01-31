@@ -272,7 +272,11 @@ body {
         display: none;
     }
     .table {
-        margin-bottom: 55px;;
+        margin-bottom: 55px;
+    }
+    .table td{
+        padding: 1px;
+        font-size: 14px;;
     }
 }
 

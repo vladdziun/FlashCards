@@ -19,6 +19,8 @@ namespace LoginReg
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseSetting("https_port", "44365")
                 .UseStartup<Startup>();
+
     }
 }
