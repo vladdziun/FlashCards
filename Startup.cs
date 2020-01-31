@@ -27,18 +27,21 @@ namespace LoginReg
             services.AddSession();            
             services.AddMvc();
 
-            services.AddAuthentication().AddGoogle(googleOptions =>  
-            {  
-                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];  
-                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];  
-            });
+            // services.AddAuthentication().AddGoogle(googleOptions =>  
+            // {  
+            //     googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];  
+            //     googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];  
+            // });
 
             services.AddAuthentication().AddFacebook(facebookOptions => 
             {
-                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+                facebookOptions.AppId = Configuration["536368073585423"];
+                facebookOptions.AppSecret = Configuration["5a3e49496083420e9f84a1920acc3ad3"];
             });
         }
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -52,6 +55,7 @@ namespace LoginReg
             app.UseStaticFiles();
             app.UseSession();  
             app.UseMvc();
+            app.UseAuthentication();
         }
     }
 }
